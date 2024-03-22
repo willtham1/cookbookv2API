@@ -12,3 +12,13 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
+model Recipe {
+  id           Int      @id @default(autoincrement()) // id is the primary key and it auto increments
+  title        String   @unique                       // Title is a unique string
+  description  String?                                // Description is an optional string ? means it can be null
+  ingredients  String 
+  instructions String 
+  createdAt    DateTime @default(now())               // createdAt is a DateTime field that defaults to the current date and time
+  updatedAt    DateTime @updatedAt                    // updatedAt is a DateTime field that defaults to the current date and time when the record is updated
+}
