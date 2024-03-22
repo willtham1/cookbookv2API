@@ -29,9 +29,14 @@ If you make any changes to schema.prisma use
 npx prisma migrate
 ```
 
-## Demo Pictures
+# Demo Pictures
+## Get
 ![Get](https://github.com/willtham1/cookbookv2API/blob/main/assets/Get.png)
+## Get with ID
 ![Get by ID](https://github.com/willtham1/cookbookv2API/blob/main/assets/Get%20with%20ID.png)
+## Post
 ![Post](https://github.com/willtham1/cookbookv2API/blob/main/assets/Post.png)
+## Patch/Put
 ![Patch/Put](https://github.com/willtham1/cookbookv2API/blob/main/assets/Patch.png)
+## Delete
 ![Delete](https://github.com/willtham1/cookbookv2API/blob/main/assets/Delete.png)
