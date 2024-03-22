@@ -14,7 +14,17 @@ Launch Project
 npm install
 npm run dev:start
 ```
-Launch backend
-```docker
+Launch backend container with docker image
+Make sure you have docker installed before running
+```bash
 docker-compose up -d
+```
+Launch seed
+This creates 2 mock data from the seed.ts file
+```bash
+npx prisma db seed
+```
+If you make any changes to schema.prisma use
+```bash
+npx prisma migrate
 ```
