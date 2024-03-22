@@ -7,8 +7,9 @@ import { UpdateRecipeDto } from './dto/update-recipe.dto';
 export class RecipeController {
   constructor(private readonly recipeService: RecipeService) {}
 
-  @Post()
-  create(@Body() createRecipeDto: CreateRecipeDto) {
+  @Post() // Maps the method to POST /recipe
+  //DTO is Data Transfer Object
+  create(@Body() createRecipeDto: CreateRecipeDto) { 
     return this.recipeService.create(createRecipeDto);
   }
 
@@ -17,12 +18,14 @@ export class RecipeController {
     return this.recipeService.findAll();
   }
 
-  @Get(':id')
+  @Get(':id') // Maps to /recipe/{id}
   findOne(@Param('id') id: string) {
     return this.recipeService.findOne(+id);
   }
 
-  @Patch(':id')
+  // The update accepts two parameters: id(extracted from the route parameter)
+  // and updateRecipeDto(Extracted from the request body)
+  @Patch(':id') // Maps to /recipe/{id}
   update(@Param('id') id: string, @Body() updateRecipeDto: UpdateRecipeDto) {
     return this.recipeService.update(+id, updateRecipeDto);
   }
